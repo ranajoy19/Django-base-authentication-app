@@ -41,8 +41,11 @@
 
     <header>
         <nav class="navbar">
-            <a href="{% url 'home' %}" class="logo" >Profile</a>
-                <a class="profile-icon-link-container">
+            <a class="navbar-brand" href="#">
+		<img src="{% static 'image/Capture.png' %}">
+	        </a>
+
+            <a class="profile-icon-link-container">
                     <span class="header-username">Hello, {{user}}</span>
                 </a>
             <a class="profile-icon-link-container" href="{% url 'logout' %}">
@@ -59,7 +62,7 @@
             {% for message in messages %}
                 <p {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</p>
             {% endfor %}
-            <img id='cross' src="{% static 'images/close.png' %}" width="15px" height="15px" alt="">
+            <img id='cross' src="{% static 'image/close.png' %}" width="15px" height="15px" alt="">
         </div>
     </div>
     <script>
